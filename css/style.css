@@ -1517,7 +1517,7 @@ body.offcanvas .colorlib-nav-toggle {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .colorlib-social li a {
