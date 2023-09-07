@@ -2014,3 +2014,13 @@ body.offcanvas .colorlib-nav-toggle {
 .js .animate-box {
   opacity: 0;
 }
+
+@media screen and (max-width: 430px) {
+  .project .desc span {
+    display: none;
+  }
+
+  .project .desc h3 {
+    display: none;
+  }
+}
