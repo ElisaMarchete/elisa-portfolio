@@ -1959,6 +1959,57 @@ body.offcanvas .colorlib-nav-toggle {
   transition: 0.5s;
 }
 
+.contact-form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  /* Adjust the width as needed */
+  max-width: 700px;
+  /* Set a maximum width to prevent it from becoming too wide on larger screens */
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  /* Increase padding to make the input fields larger */
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  /* Increase font size for better readability */
+}
+
+.contact-form textarea {
+  height: 150px;
+  /* Increase height of the textarea */
+}
+
+.contact-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  /* Increase padding for larger button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  /* Increase font size for better readability */
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
 @media screen and (max-width: 768px) {
   .colorlib-nav-toggle {
     opacity: 1;
