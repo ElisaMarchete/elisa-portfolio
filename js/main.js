@@ -289,3 +289,29 @@
     owlCrouselFeatureSlide();
   });
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    var formData = new FormData(form);
+    var name = formData.get("name");
+    var email = formData.get("email");
+    var subject = formData.get("subject");
+    var message = formData.get("message");
+
+    // Construct mailto URL
+    var mailtoUrl =
+      "mailto:elisamarchete@gmail.com" +
+      "?subject=" +
+      encodeURIComponent(subject) +
+      "&body=" +
+      encodeURIComponent(message);
+
+    // Open user's default email client
+    window.location.href = mailtoUrl;
+  });
+});
