@@ -7456,4 +7456,25 @@ button.close {
   }
 }
 
+/* Very small devices */
+@media screen and (max-width: 360px) {
+  .device-width {
+    padding-left: 20px;
+  }
+}
+
+/* Common modern mobile phones */
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .device-width {
+    padding-left: 20px;
+  }
+}
+
+/* Larger phones / phablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .device-width {
+    padding-left: 20px;
+  }
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
