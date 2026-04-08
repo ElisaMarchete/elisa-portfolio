@@ -292,26 +292,43 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   var form = document.getElementById("contact-form");
+  var submitBtn = document.getElementById("submit-btn");
+  var statusDiv = document.getElementById("form-status");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    // Get form data
+    submitBtn.disabled = true;
+    submitBtn.value = "Sending...";
+    statusDiv.style.display = "none";
+
     var formData = new FormData(form);
-    var name = formData.get("name");
-    var email = formData.get("email");
-    var subject = formData.get("subject");
-    var message = formData.get("message");
 
-    // Construct mailto URL
-    var mailtoUrl =
-      "mailto:elisamarchete@gmail.com" +
-      "?subject=" +
-      encodeURIComponent(subject) +
-      "&body=" +
-      encodeURIComponent(message);
-
-    // Open user's default email client
-    window.location.href = mailtoUrl;
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (data.success) {
+          statusDiv.innerHTML =
+            '<div class="alert alert-success">Thank you! Your message has been sent.</div>';
+          form.reset();
+        } else {
+          statusDiv.innerHTML =
+            '<div class="alert alert-danger">Oops! Something went wrong. Please try again.</div>';
+        }
+      })
+      .catch(function () {
+        statusDiv.innerHTML =
+          '<div class="alert alert-danger">Oops! Something went wrong. Please try again.</div>';
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.value = "Send Message";
+        statusDiv.style.display = "block";
+      });
   });
 });

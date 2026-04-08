@@ -515,7 +515,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .colorlib-narrow-content {
-  padding: 0 2.5em;
+  padding: 0 4em;
 }
 
 @media screen and (max-width: 768px) {
@@ -537,8 +537,8 @@ body.offcanvas .colorlib-nav-toggle {
 .colorlib-about,
 .colorlib-services,
 .colorlib-contact {
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   clear: both;
   width: 100%;
   display: block;
@@ -554,8 +554,8 @@ body.offcanvas .colorlib-nav-toggle {
   .colorlib-about,
   .colorlib-services,
   .colorlib-contact {
-    padding-top: 5em;
-    padding-bottom: 8em;
+    padding-top: 3em;
+    padding-bottom: 5em;
   }
 }
 
@@ -568,7 +568,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 .colorlib-heading {
   font-size: 18px;
-  margin-bottom: 4em;
+  margin-bottom: 2.5em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -582,7 +582,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 @media screen and (max-width: 768px) {
   .colorlib-heading {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
 }
 
@@ -1206,6 +1206,17 @@ body.offcanvas .colorlib-nav-toggle {
   .colorlib-feature.colorlib-feature-sm .colorlib-icon i {
     font-size: 28px;
   }
+}
+
+.colorlib-contact .colorlib-feature.colorlib-feature-sm .colorlib-icon i {
+  color: #555555;
+  font-size: 30px;
+}
+
+.colorlib-contact .colorlib-feature.colorlib-feature-sm .colorlib-text p,
+.colorlib-contact .colorlib-feature.colorlib-feature-sm .colorlib-text p a {
+  color: #555555;
+  font-size: 13px;
 }
 
 .blog-entry {
